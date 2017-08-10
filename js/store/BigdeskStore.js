@@ -90,9 +90,9 @@ var Cluster = Backbone.Model.extend({
             hello.fetch({
                 success: function(model, response){
                     var version = hello.get("version");
-                    if (version && version.number) {
+                    version = 1.7;
+                    if (version) {
                         //version = version.number;
-                        version = 1.8;
                         var _vArray = version.split(".");
                         if (_vArray.length > 2 && _model.checkVersion(_vArray)) {
                             _model.versionVerified(version);
